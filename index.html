@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+	<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			
+			<meta property="og:title" content="" />
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="" />
+			<meta property="og:image" content="" />
+			<meta property="og:description" content="" />
+			
+			<meta name="description" content="">
+			<meta name="keywords" content="">
+			<meta name="author" content="Tiago Severino">
+			
+			<title>MovieMan</title>
+			
+			<!-- Font Ubuntu Mono -->
+			<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+
+			<!-- Font Awesome -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+			<!-- Bootstrap -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+			<!-- Stylesheet -->
+			<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<!-- Navbar -->
+		<header> 
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<a class="navbar-brand" onclick="location.reload()">MovieMan</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a id="popular" class="nav-link">Popular</a>
+						</li>
+						<li class="nav-item">
+							<a id="nowplaying" class="nav-link">Playing</a>
+						</li>
+						<li class="nav-item">
+							<a id="toprated" class="nav-link">Top Rated</a>
+						</li>
+						<li class="nav-item">
+							<a id="upcoming" class="nav-link">Upcoming</a>
+						</li>
+						<li class="nav-item">
+							<a id="trending" class="nav-link">Trending</a>
+						</li>
+						<li class="nav-item">
+							<a id="watched" class="nav-link">Watched</a>
+						</li>
+						<li class="nav-item">
+							<a id="watching" class="nav-link">Watching</a>
+						</li>
+						<li class="nav-item">
+							<a id="wishlist" class="nav-link">Wishlist</a>
+						</li>
+					</ul>
+					<form class="form-inline my-2 my-lg-0" onkeypress="return event.keyCode != 13;">
+						<input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+					</form>
+				</div>
+			</nav>
+		</header>
+
+		<!-- Container --> 
+		<div class="container">
+			<div class="row mt-5">
+				<div id="moviedetails" class="container-fluid">
+
+				</div>
+				<div id="showcase" class="container-fluid">
+					
+				</div>
+			</div>
+		</div>
+
+		<!-- Remove Modal --> 
+		<div class="modal fade" id="removeDialog" tabindex="-1" role="dialog" aria-labelledby="removeDialogLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="removeDialoglLabel">Remove Movie</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						Are you sure you want to remove the movie?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary delete-movie" data-dismiss="modal">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Empty Modal --> 
+		<div class="modal fade" id="emptyDialog" tabindex="-1" role="dialog" aria-labelledby="emptyDialogLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="alert alert-danger" role="alert">
+					Your '<div class="modal-alert">To Watch</div>' List Is Empty!
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer --> 
+		<footer class="footer">
+			<div class="container">
+				<div class="offset-md-3 col-sm-6">
+					<p class="text-muted"><i class="fa fa-copyright"></i> <a href="https://severino.xyz" class="text-muted">Diana Gomes & Tiago Severino</a> - All Rights Reserved. 
+						<a href="https://github.com/TiagoSeverino" target="_blank"><i class="fa fa-github fa-2x text-muted ml-5"></i></a>
+						<a href="mailto:tiago@severino.xyz" target="_blank"><i class="fa fa-envelope-square fa-2x text-muted"></i></a>
+					</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	
+	<!-- Bootstrap -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<!-- MovieMan -->
+	<script src="main.js"></script>
+</html>
