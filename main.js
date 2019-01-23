@@ -375,8 +375,7 @@ $(
 														<button class="btn btn-pill btn-primary watched">Watched</button>
 														<button class="btn btn-pill btn-primary watching">Watching</button>
 														<button class="btn btn-pill btn-primary wishlist">Wishlist</button>
-														<a href="https://www.tugaflix.com/Filme?F=${ movie.imdb_id.substring(2, movie.imdb_id.length) }">Tugaflix</a>
-														<a href="https://www7.mrpiracy.xyz/filme.php?imdb=${ movie.imdb_id }">Mr.Piracy</a>
+														<a href="https://www8.mrpiracy.xyz/filme.php?imdb=${ movie.imdb_id }">Mr.Piracy</a>
 														<a href="https://www.netflix.com/search?q=${ movie.title }">Netflix</a>
 														
 													</div>

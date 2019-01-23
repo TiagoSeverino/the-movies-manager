@@ -22,7 +22,7 @@ body {
     transition: transform .2s;
 }
 
-#showcase .thumbnail img:hover ~ h5{
+#showcase .thumbnail:hover > h5{
     opacity: 1;
     transform: translateY(-10px);
 }
@@ -41,8 +41,8 @@ body {
     transition: box-shadow 0.2s ease-in-out;
 }
 
-#showcase .thumbnail img:hover{
-    opacity: 0.9;
+#showcase .thumbnail:hover > img{
+    opacity: 0.8;
     transform: scale(1.1);
 
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
