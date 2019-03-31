@@ -1,6 +1,6 @@
 class TheMovieDB {
 	constructor(apiKey, language) {
-		this.apiBase = 'http://api.themoviedb.org/3';
+		this.apiBase = 'https://api.themoviedb.org/3';
 
 		this.apiKey = apiKey;
 		this.language = language;
