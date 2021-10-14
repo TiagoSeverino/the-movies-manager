@@ -375,7 +375,7 @@ $(
 														<button class="btn btn-pill btn-primary watched">Watched</button>
 														<button class="btn btn-pill btn-primary watching">Watching</button>
 														<button class="btn btn-pill btn-primary wishlist">Wishlist</button>
-														<a href="https://www8.mrpiracy.top/filme.php?imdb=${ movie.imdb_id }">Mr.Piracy</a>
+														<a href="https://pobre.tv/movies/${ movie.imdb_id }">Pobre.tv</a>
 														<a href="https://www.netflix.com/search?q=${ movie.title }">Netflix</a>
 														
 													</div>
